@@ -147,6 +147,8 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
+<li>$:/config/RelinkOnRename</li>
+
 <li>$:/config/Whitespace/sidebar</li>
 
 <li>$:/config/Whitespace/Spacious</li>
@@ -217,7 +219,9 @@ Error message and password prompt
 
 <li>使用 Github Pages 部署 TiddlyWiki</li>
 
-<li>主题设置</li>
+<li>主题与页面相关设置</li>
+
+<li>About</li>
 
 </ul>
 </p>
@@ -241,6 +245,9 @@ Error message and password prompt
 </div>
 <div created="20201023055319719" creator="starliiit" modified="20201023055319719" modifier="starliiit" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
+</div>
+<div created="20201023061246461" creator="starliiit" modified="20201023061246461" modifier="starliiit" title="$:/config/RelinkOnRename">
+<pre>yes</pre>
 </div>
 <div created="20201023053642968" creator="starliiit" modified="20201023054414368" modifier="starliiit" title="$:/config/Whitespace/sidebar">
 <pre>left</pre>
@@ -9657,8 +9664,8 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 &lt;/$set&gt;
 </pre>
 </div>
-<div created="20201023052117326" creator="starliiit" modified="20201023055301790" modifier="starliiit" title="$:/DefaultTiddlers">
-<pre>[list[$:/StoryList]]</pre>
+<div created="20201023052117326" creator="starliiit" modified="20201023061259932" modifier="starliiit" title="$:/DefaultTiddlers">
+<pre>About</pre>
 </div>
 <div created="20201023050255522" modified="20201023050257339" title="$:/GitHub/Filename">
 <pre>index.html</pre>
@@ -9895,11 +9902,11 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 <div created="20201023052042961" modified="20201023052043964" title="$:/SiteTitle">
 <pre>碎碎念</pre>
 </div>
-<div created="20201023050237683" creator="starliiit" modified="20201023055305511" modifier="starliiit" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20201023050237683" creator="starliiit" modified="20201023055347951" modifier="starliiit" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
-<div created="20201023053525096" creator="starliiit" modified="20201023055311702" modifier="starliiit" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+<div created="20201023053525096" creator="starliiit" modified="20201023055659542" modifier="starliiit" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/StoryView</pre>
 </div>
 <div created="20201023053847383" creator="starliiit" modified="20201023055248503" modifier="starliiit" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
@@ -9907,8 +9914,8 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 <div created="20201023053859680" creator="starliiit" modified="20201023053859680" modifier="starliiit" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Themes</pre>
 </div>
-<div created="20201023050235507" creator="starliiit" modified="20201023055310726" modifier="starliiit" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20201023050235507" creator="starliiit" modified="20201023061257037" modifier="starliiit" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20201023050238523" creator="starliiit" modified="20201023053914935" modifier="starliiit" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
@@ -9925,7 +9932,7 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 <div created="20201023053515679" creator="s" modified="20201023053516658" modifier="starliii" title="$:/status/UserName">
 <pre>starliiit</pre>
 </div>
-<div list="" title="$:/StoryList">
+<div list="About" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10378,8 +10385,8 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
     }
 }</pre>
 </div>
-<div created="20201023054512999" creator="starliiit" modified="20201023054516567" modifier="starliiit" title="$:/view">
-<pre>pop</pre>
+<div created="20201023054512999" creator="starliiit" modified="20201023055700255" modifier="starliiit" title="$:/view">
+<pre>zoomin</pre>
 </div>
 <div created="20201023050743498" modified="20201023051315403" tags="tutorial" title="使用 Github Pages 部署 TiddlyWiki" type="text/x-markdown">
 <pre>整体流程参见 [这篇教程](https://kookma.github.io/TW5-GitHub-Saver/) 即可。
@@ -10390,10 +10397,29 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 
 2. 部署在 Github Pages 会不会造成 token 泄露：有人在邮件列表里问过，作者回答是 token 内容只保存在浏览器的 local storage，不会保存在 HTML 文件里因此没有隐私泄露问题。不过这样在切换浏览器或者清空缓存的时候需要重新输入一次 token。不过也没啥问题，之前的忘了的话大不了删掉重新创建就好了。</pre>
 </div>
-<div created="20201023054547785" creator="starliiit" modified="20201023054754472" modifier="starliiit" tags="about" title="主题设置" type="text/x-markdown">
-<pre>本博客使用主题：[whitespace](http://j.d.whitespace.tiddlyspot.com/)。
+<div created="20201023054547785" creator="starliiit" modified="20201023061247311" modifier="starliiit" tags="tiddlywiki" title="主题与页面相关设置" type="text/x-markdown">
+<pre>## 主题
 
-侧边栏的自动收起似乎与 Appearance =&gt; SotryView 有关，如果设置成 classic 好像不能自动收起，pop 和 zoomin 都是可以的。</pre>
+本博客使用主题：[whitespace](http://j.d.whitespace.tiddlyspot.com/)。
+
+侧边栏的自动收起似乎与 Appearance =&gt; SotryView 有关，如果设置成 classic 好像不能自动收起，pop 和 zoomin 都是可以的。
+
+## 设置默认 tiddlers
+
+ref: https://tiddlywiki.com/static/Configuring%2520startup%2520tiddlers.html
+
+可以使用 filter expression，比如筛选带有指定 tag 的文章之类的。
+
+尝试过基于日期筛选来让首页默认显示 5 天内的文章: `[days:created[-5]]`
+
+但是会把导入主题时创建的奇奇怪怪 tiddlers 也放进来，只能作罢。</pre>
+</div>
+<div created="20201023055652015" creator="starliiit" modified="20201023061001478" modifier="starliiit" tags="about" title="About" type="text/x-markdown">
+<pre>这里用于保存一个无趣灵魂的喃喃梦呓。A dead man's sleeptalking.
+
+&gt; “梅蒂儿！总有一天，我会再和你相见吧？”
+&gt; “我只是你少年时代心中存在的青春幻影。再见，我的铁郎！”
+</pre>
 </div>
 
 
