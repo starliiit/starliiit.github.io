@@ -143,7 +143,13 @@ Error message and password prompt
 
 <li>$:/config/EmptyStoryMessage</li>
 
+<li>$:/config/Whitespace/sidebar</li>
+
 <li>$:/core</li>
+
+<li>$:/core/ui/SideBar/More</li>
+
+<li>$:/core/ui/SideBar/Tools</li>
 
 <li>$:/DefaultTiddlers</li>
 
@@ -213,6 +219,9 @@ Error message and password prompt
 <div id="storeArea" style="display:none;">
 <div created="20190202142826323" creator="jd" modified="20201023053530264" modifier="starliiit" title="$:/config/EmptyStoryMessage">
 <pre></pre>
+</div>
+<div created="20201023053642968" creator="starliiit" modified="20201023053644210" modifier="starliiit" title="$:/config/Whitespace/sidebar">
+<pre>left</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.22">
 <pre>{
@@ -9587,6 +9596,42 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div caption="{{$:/language/SideBar/More/Caption}}" modified="20201023053708087" modifier="starliiit" title="$:/core/ui/SideBar/More">
+<pre>&lt;div class=&quot;tc-more-sidebar&quot;&gt;
+&lt;$macrocall $name=&quot;tabs&quot; tabsList=&quot;[all[shadows+tiddlers]tag[$:/tags/MoreSideBar]!has[draft.of]]&quot; default={{$:/config/DefaultMoreSidebarTab}} state=&quot;$:/state/tab/moresidebar&quot; class=&quot;tc-vertical tc-sidebar-tabs-more&quot; /&gt;
+&lt;/div&gt;</pre>
+</div>
+<div caption="{{$:/language/SideBar/Tools/Caption}}" modified="20201023053706016" modifier="starliiit" title="$:/core/ui/SideBar/Tools">
+<pre>\define lingo-base() $:/language/ControlPanel/
+\define config-title()
+$:/config/PageControlButtons/Visibility/$(listItem)$
+\end
+
+&lt;&lt;lingo Basics/Version/Prompt&gt;&gt; &lt;&lt;version&gt;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-icons&quot; value=&quot;yes&quot;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-text&quot; value=&quot;yes&quot;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-class&quot; value=&quot;&quot;&gt;
+
+&lt;$list filter=&quot;[all[shadows+tiddlers]tag[$:/tags/PageControls]!has[draft.of]]&quot; variable=&quot;listItem&quot;&gt;
+
+&lt;div style=&quot;position:relative;&quot; class={{{ [&lt;listItem&gt;encodeuricomponent[]addprefix[tc-btn-]] }}}&gt;
+
+&lt;$checkbox tiddler=&lt;&lt;config-title&gt;&gt; field=&quot;text&quot; checked=&quot;show&quot; unchecked=&quot;hide&quot; default=&quot;show&quot;/&gt; &lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt;/&gt; &lt;i class=&quot;tc-muted&quot;&gt;&lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt; field=&quot;description&quot;/&gt;&lt;/i&gt;
+
+&lt;/div&gt;
+
+&lt;/$list&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+</pre>
+</div>
 <div created="20201023052117326" modified="20201023052117326" title="$:/DefaultTiddlers">
 <pre></pre>
 </div>
@@ -9828,11 +9873,11 @@ Error message and password prompt
 <div created="20201023050237683" modified="20201023050300714" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20201023053525096" creator="starliiit" modified="20201023053525096" modifier="starliiit" title="$:/state/tab--1963855381">
-<pre>$:/themes/jd/Mono/Config</pre>
+<div created="20201023053525096" creator="starliiit" modified="20201023053702527" modifier="starliiit" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/StoryView</pre>
 </div>
-<div created="20201023050235507" creator="starliiit" modified="20201023053523424" modifier="starliiit" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20201023050235507" creator="starliiit" modified="20201023053719105" modifier="starliiit" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20201023050238523" modified="20201023050238523" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -9846,7 +9891,7 @@ Error message and password prompt
 <div created="20201023053515679" creator="s" modified="20201023053516658" modifier="starliii" title="$:/status/UserName">
 <pre>starliiit</pre>
 </div>
-<div created="20201023053508210" creator="starliiit" list="$:/Import [[使用 Github Pages 部署 TiddlyWiki]]" modified="20201023053542673" modifier="starliiit" title="$:/StoryList">
+<div created="20201023053508210" creator="starliiit" list="$:/ControlPanel" modified="20201023053716377" modifier="starliiit" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
