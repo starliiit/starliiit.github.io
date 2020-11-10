@@ -149,13 +149,19 @@ Error message and password prompt
 
 <li>$:/config/RelinkOnRename</li>
 
+<li>$:/config/SideBar/Visibility/$:/core/ui/SideBar/Recent</li>
+
 <li>$:/config/Whitespace/sidebar</li>
 
 <li>$:/config/Whitespace/Spacious</li>
 
 <li>$:/core</li>
 
+<li>$:/core/ui/MoreSideBar/Recent</li>
+
 <li>$:/core/ui/SideBar/More</li>
+
+<li>$:/core/ui/SideBar/Recent</li>
 
 <li>$:/core/ui/SideBar/Tools</li>
 
@@ -258,6 +264,9 @@ Error message and password prompt
 </div>
 <div created="20201023061246461" creator="starliiit" modified="20201023061246461" modifier="starliiit" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
+</div>
+<div created="20201110020302842" creator="starliiit" modified="20201110020303858" modifier="starliiit" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Recent">
+<pre>hide</pre>
 </div>
 <div created="20201023053642968" creator="starliiit" modified="20201023054414368" modifier="starliiit" title="$:/config/Whitespace/sidebar">
 <pre>left</pre>
@@ -9638,10 +9647,18 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div caption="{{$:/language/SideBar/Recent/Caption}}" created="20201110020144339" creator="starliiit" modified="20201110020209371" modifier="starliiit" tags="$:/tags/MoreSideBar $:/tags/SideBar" title="$:/core/ui/MoreSideBar/Recent">
+<pre>&lt;$macrocall $name=&quot;timeline&quot; format={{$:/language/RecentChanges/DateFormat}} dateField=&quot;created&quot;/&gt;
+</pre>
+</div>
 <div caption="{{$:/language/SideBar/More/Caption}}" modified="20201023053708087" modifier="starliiit" title="$:/core/ui/SideBar/More">
 <pre>&lt;div class=&quot;tc-more-sidebar&quot;&gt;
 &lt;$macrocall $name=&quot;tabs&quot; tabsList=&quot;[all[shadows+tiddlers]tag[$:/tags/MoreSideBar]!has[draft.of]]&quot; default={{$:/config/DefaultMoreSidebarTab}} state=&quot;$:/state/tab/moresidebar&quot; class=&quot;tc-vertical tc-sidebar-tabs-more&quot; /&gt;
 &lt;/div&gt;</pre>
+</div>
+<div caption="{{$:/language/SideBar/Recent/Caption}}" modified="20201110020401426" modifier="starliiit" title="$:/core/ui/SideBar/Recent">
+<pre>&lt;$macrocall $name=&quot;timeline&quot; format={{$:/language/RecentChanges/DateFormat}}/&gt;
+</pre>
 </div>
 <div caption="{{$:/language/SideBar/Tools/Caption}}" modified="20201023053706016" modifier="starliiit" title="$:/core/ui/SideBar/Tools">
 <pre>\define lingo-base() $:/language/ControlPanel/
@@ -9692,8 +9709,7 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/themes/jd/Whitespace]]
-# [[$:/theme]]</pre>
+# [[$:/core/ui/MoreSideBar/Recent]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9915,16 +9931,16 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 <div created="20201023050237683" creator="starliiit" modified="20201023064313114" modifier="starliiit" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
-<div created="20201023053525096" creator="starliiit" modified="20201023064302115" modifier="starliiit" title="$:/state/tab--1963855381">
-<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
+<div created="20201023053525096" creator="starliiit" modified="20201110020502122" modifier="starliiit" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
-<div created="20201023053847383" creator="starliiit" modified="20201023055248503" modifier="starliiit" title="$:/state/tab--2112689675">
+<div created="20201023053847383" creator="starliiit" modified="20201110020507778" modifier="starliiit" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
 <div created="20201023053859680" creator="starliiit" modified="20201023053859680" modifier="starliiit" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Themes</pre>
 </div>
-<div created="20201023050235507" creator="starliiit" modified="20201023155412126" modifier="starliiit" title="$:/state/tab-1749438307">
+<div created="20201023050235507" creator="starliiit" modified="20201110020524650" modifier="starliiit" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
 <div created="20201023050238523" creator="starliiit" modified="20201023062949620" modifier="starliiit" title="$:/state/tab-2065006209">
@@ -9933,8 +9949,8 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 <div created="20201023053536264" creator="starliiit" modified="20201023053541864" modifier="starliiit" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20201023054031791" creator="starliiit" modified="20201023055318118" modifier="starliiit" title="$:/state/tabs/controlpanel/toolbars-1345989671">
-<pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
+<div created="20201023054031791" creator="starliiit" modified="20201110020429490" modifier="starliiit" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
@@ -9942,7 +9958,7 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 <div created="20201023053515679" creator="s" modified="20201023053516658" modifier="starliii" title="$:/status/UserName">
 <pre>starliiit</pre>
 </div>
-<div created="20201110015312797" creator="starliiit" list="[[Do you hear people sing]] [[Living the now]] [[Sneaky Pete 批评]] About" modified="20201110015544698" modifier="starliiit" title="$:/StoryList">
+<div created="20201110020101978" creator="starliiit" list="$:/ControlPanel $:/Import $:/core/ui/MoreSideBar/Recent About" modified="20201110020232163" modifier="starliiit" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9958,19 +9974,19 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;https://starliiit.me/&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/sl/Documents/blog/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;starliiit.me&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;starliiit.me&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;https:&quot;
+            &quot;text&quot;: &quot;file:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -9978,7 +9994,7 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/&quot;
+            &quot;text&quot;: &quot;/C:/Users/sl/Documents/blog/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9986,7 +10002,7 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;https://starliiit.me&quot;
+            &quot;text&quot;: &quot;file://&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
